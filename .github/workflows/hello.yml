@@ -1,0 +1,10 @@
+name: Hello                        # workflow 이름
+on:push                            # 이벤트 (언제 실행할 건지)
+jobs:                              # 잡 정의 (무엇을 실행할 건지)
+  hello:                           # 잡 이름 정의
+    runs-on: Ubuntu-22.04          # 어디서 실행되는지 정의
+    steps:                         # 절차 정의
+      - name: say hello            # 스텝 이름 정의 (생략 가능)
+        run: echo "Hello, World"   # 셀 명령 실행
+      - name: call checkout@v4     # 스텝 이름 정의 (생략 가능)
+        uses: actions/checkout@v4  # 액션 호출 
