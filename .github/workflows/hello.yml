@@ -1,5 +1,5 @@
 name: Hello                        # workflow 이름
-on:push                            # 이벤트 (언제 실행할 건지)
+on: push                           # 이벤트 (언제 실행할 건지)
 jobs:                              # 잡 정의 (무엇을 실행할 건지)
   hello:                           # 잡 이름 정의
     runs-on: ubuntu-22.04          # 어디서 실행되는지 정의
