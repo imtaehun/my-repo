@@ -8,5 +8,5 @@ jobs:
     steps:
     - run: echo "${EXAMPLE}"                  # 셸 명령에서 직접 참조
     - env:
-      EXAMPLE: Defined by step level          # 환경변수 덮어쓰기
+        EXAMPLE: Defined by step level          # 환경변수 덮어쓰기
       run: echo "${{env.EXAMPLE}}"            # 셸 명령에서 env 컨텐스트로 참조
