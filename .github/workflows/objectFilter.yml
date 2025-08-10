@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       HTML: ${{ github.event.*.html_url }}
-      run: echo "${HTML}"
+      steps:
+        - run: echo "${HTML}"
