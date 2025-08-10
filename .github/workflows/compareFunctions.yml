@@ -1,11 +1,11 @@
 name: Compare functions
 on: push
-  jobs:
-    compare:
-      runs-on: ubuntu-22.04
-      steps:
-        - run: printenv | grep '_FUNC'
-          env:
-            CONTAINS_FUNC: ${{ contains('Hello', 'ell') }}
-            STARTWITH_FUNC: ${{ starWith('Hello', 'He') }}
-            ENDWITH_FUNC: ${{ ENDWITH('Hello', 'lo') }}
+jobs:
+  compare:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: printenv | grep '_FUNC'
+        env:
+          CONTAINS_FUNC: ${{ contains('Hello', 'ell') }}
+          STARTWITH_FUNC: ${{ starWith('Hello', 'He') }}
+          ENDWITH_FUNC: ${{ ENDWITH('Hello', 'lo') }}
