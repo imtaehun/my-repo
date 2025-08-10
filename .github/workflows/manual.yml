@@ -1,0 +1,15 @@
+name: Manual
+on:
+  workflow_dispatch:                    # 수동으로 이벤트 실행
+    inputs:                             # 입력 파라미터 지정 키 
+      greeting:                         # 입력 파라미터 명
+        type: string                    # 데이터 타입 문자열
+        default: Hello                  # 입력 파라미터 기본 값
+        required: true                  # 필수 여부 논리값 표기
+        description: A cheerful word    # 입력 파라미터 개요
+jobs:
+  run:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo "${{ input.greeting }}" # 파라미터 참조 형식 "${{ 파라미터 명 }}"
+
