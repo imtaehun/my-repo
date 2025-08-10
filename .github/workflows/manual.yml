@@ -11,5 +11,5 @@ jobs:
   run:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo "${{ input.greeting }}" # 파라미터 참조 형식 "${{ 파라미터 명 }}"
+      - run: echo "${{ inputs.greeting }}" # 파라미터 참조 형식 "${{ 파라미터 명 }}"
 
