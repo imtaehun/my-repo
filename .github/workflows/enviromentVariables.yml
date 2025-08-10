@@ -1,0 +1,12 @@
+name: Override enviroment variables
+on: push
+env:
+  EXAMPLE: Defined by workflow level        # 워크플로우 레벨에서 환경변수 정의
+jobs:
+print:
+  runs-on: ubuntu-22.04
+  steps:
+  - run: echo "${EXAMPLE}"                  # 셸 명령에서 직접 참조
+  - env:
+    EXAMPLE: Defined by step level          # 환경변수 덮어쓰기
+    run: echo "${{env.EXAMPLE}}"            # 셸 명령에서 env 컨텐스트로 참조
