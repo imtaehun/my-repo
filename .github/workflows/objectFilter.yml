@@ -6,4 +6,4 @@ jobs:
     env:
       HTML: ${{ github.event.*.html_url }}
       steps:
-        - run: echo "${HTML}"
+        - run: echo "${{ env.HTML }}"
