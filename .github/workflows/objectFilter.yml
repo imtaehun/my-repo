@@ -4,6 +4,6 @@ jobs:
   print:
     runs-on: ubuntu-22.04
     env:
-      HTML: ${{ github.event.*.html_url }}
+      HTMLS: ${{ join(github.event.*.html_url, ',') }}
     steps:
-      - run: echo "${{ env.HTML }}"
+      - run: echo "${{ env.HTMLS }}"
